@@ -9,10 +9,12 @@ module.exports = {
     filename: '[name].js',
     path: path.join(__dirname, 'dist')
   },
-  devtool: isDevelopment ? 'inline-source-map' : false,
   target: 'node',
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts'],
+    alias: {
+      '~': path.resolve(__dirname, 'src')
+    }
   },
   module: {
     rules: [{
