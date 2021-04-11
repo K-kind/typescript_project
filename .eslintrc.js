@@ -14,6 +14,8 @@ module.exports = {
   //   // sourceType: 'module'
   // },
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
+  },
   ignorePatterns: ['/dist/**']
 }
