@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint:eslint": "eslint --ext .js,.ts,.vue .",
+    "lint:eslint": "eslint --ext .js,.ts .",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint; npm run lint:prettier",
     "fix": "npm run lint:eslint -- --fix; npm run lint:prettier -- --write"
@@ -26,5 +27,8 @@
     "webpack": "^5.27.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@k-kind/svg-generator": "0.0.3"
   }
 }
